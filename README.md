@@ -1,5 +1,5 @@
 # Pulsar ML
-## Paper submiited to MNRAS
+## Paper submitted to MNRAS
 
 There are four Machine Learning models discussed here:
 
@@ -21,6 +21,8 @@ I've written my some helper functions to plot the confusion matrices, feature im
 5. imbalance(SMOTE)
 6. SciPy(for numerical integration)
 
+### Installation and a small workaround
+Installation for NumPy, SciPy, xgboost, imbalance and scikit-learn is straightforward, either using `pip` or `conda`. Installation of sknn is tricky since there is a version incompatibility. With `theano=0.8.2` only `scikit-learn neural-network=0.7` is compatible, so it is advised to install sknn=0.7 whereas 0.8 is the latest version. This is due to an update in `theano` which affects the `MultiLayerPerceptron` class of `sknn`.
 
 ### Dataset
 
