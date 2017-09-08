@@ -3,16 +3,16 @@
 
 There are four Machine Learning models discussed here:
 
-1. Adaboost
-2. Gradient Boosting Classifier(GBC)
-3. Neural Network
+1. Artificial Neural Network(Multi Layer Perceptron)
+2. Adaboost
+3. Gradient Boosting Classifier(GBC)
 4. eXtreme Gradient BOOSTing(XGBoost)
 
 These four models are trained in four iPyNB files present in the repo.
 
 Each of the ipynb files contains separate sections. In each of them, only the first section concerns with training. Remaining all present confusion matrices, feature importances(in case of tree based methods), False Positive Rate analysis, area analysis and metric scores. 
 
-I've written my some helper functions to plot the confusion matrices, feature importances and computing areas. I've relied heavily on the following Python Modules: 
+I've written my some helper functions to plot the confusion matrices, feature importances and computing areas. I relied heavily on the following Python Modules: 
 
 1. NumPy(bread and butter of scientific Python)
 2. Scikit-learn(one stop Python machine learning)
@@ -26,7 +26,7 @@ Installation for NumPy, SciPy, xgboost, imbalance and scikit-learn is straightfo
 
 ### Dataset
 
-The entire dataset is uploaded in the `all_in_one.csv` file. This is the result of generating features from Pulsar Candidate file as outputted by PulsarHunter.
+The entire dataset is uploaded in the `all_in_one.csv` file. This is the result of generating features from Pulsar Candidate file as outputted by PulsarHunter. I've used `ExtractFeatures.py` script to extract features from `PHCX` files. 
 
 ### Running
 
