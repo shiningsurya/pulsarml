@@ -1,5 +1,4 @@
 # Pulsar ML
-## Paper submitted to MNRAS
 
 There are four Machine Learning models discussed here:
 
