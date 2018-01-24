@@ -14,3 +14,22 @@ def plot_feature_importance(imps,stds,title):
     plt.grid(True)
     plt.xticks(ran,idx)
     plt.xlim([-1,imps.shape[0]])
+    
+def plot_summary_fimp(x):
+    """ Helps in plotting summary of features"""
+    n,d = x.shape
+    ret = [np.zeros(d) for i in xrange(d)]
+    xx = np.arange(d)
+    for i in xrange(d):
+        q,c = np.unique(x[:,i],return_counts=True)
+        for iqq,qq in enumerate(q):
+            ret[qq][i] = c[iqq]
+    wut = np.array(ret) # 
+    col = np.array(['indigo','blue','green','magenta','pink','yellow'])
+    kt = np.zeros(d) # keep track
+    for idx in xrange(d):
+        if idx == 0:
+            plt.bar(np.arange(d),wut[idx],color=col[idx],align='center',label=str(idx))
+        else:
+            plt.bar(np.arange(d),wut[idx],bottom=kt,color=col[idx],align='center',label=str(idx))
+        kt += wut[idx]
